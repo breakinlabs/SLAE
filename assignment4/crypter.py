@@ -11,8 +11,6 @@ key = results.key.replace('\\x', '0x')
 plain_code = results.shellcode.split('\\x')
 del plain_code[0]
 
-
-
 for counter in range(0, len(plain_code)):
     plain_code[counter] = "0x" + plain_code[counter]
     encrypt_hex = hex(int(plain_code[counter], 16) ^ int(key, 16))
