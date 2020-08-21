@@ -37,14 +37,3 @@ print("plain:       '{}'".format(results.shellcode))
 print("encrypted:   '{}'".format(encrypted_shellcode))
 print("key:         '{}'".format(key))
 print("shellscript: '{}'".format(decoder+encrypted_shellcode))
-
-
-
-
-
-
-
-
-
-
-
